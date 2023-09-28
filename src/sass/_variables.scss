@@ -1,0 +1,22 @@
+$font-weights: (
+  'font-medium': 500,
+  'font-semibold': 600,
+  'font-bold': 700,
+  'font-extrabold': 800,
+);
+
+@function getFontWeight($key) {
+  @return map-get($font-weights, $key);
+}
+
+$colors: (
+  'brand-color': #ff6809,
+  'main-title': #3d3d3d,
+  'black': #111518,
+  'background-white': #ffffff,
+  'primary-gray': #b9b9b9,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
