@@ -1,0 +1,69 @@
+.how {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.how__title {
+  font-size: 1.25em;
+  font-weight: getFontWeight('font-extrabold');
+  margin-bottom: 1.875em;
+}
+.how__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 95%;
+  margin-bottom: 0.94em;
+  padding: 1.25em 0.5em;
+  background-color: getColor('background-white');
+  color: getColor('black');
+  box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(185, 185, 185, 0.5);
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    background-color: getColor('brand-color');
+    color: getColor('background-white');
+    box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(255, 104, 9, 0.5);
+  }
+  &:focus .how__item__text,
+  &:hover .how__item__text {
+    color: getColor('background-white');
+  }
+  &:focus .how__item__icon,
+  &:hover .how__item__icon {
+    fill: getColor('background-white');
+  }
+  &:focus .how__item__title::after,
+  &:hover .how__item__title::after {
+    color: getColor('background-white');
+  }
+}
+.how__item__title {
+  font-size: 0.875em;
+  font-weight: getFontWeight('font-bold');
+  &::after {
+    content: '\2014';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: getColor('brand-color');
+  }
+}
+.how__item__text {
+  font-size: 0.75em;
+  color: getColor('primary-gray');
+  font-weight: getFontWeight('font-medium');
+  letter-spacing: 0.05em;
+}
+.how__item__icon {
+  width: 3em;
+  height: 3em;
+  fill: getColor('brand-color');
+  margin-bottom: 0.8em;
+}

@@ -1,0 +1,47 @@
+.problems__background {
+  background-image: linear-gradient(
+    to bottom,
+    getColor('black') 80%,
+    getColor('background-white') 80%
+  );
+  padding-top: 3.125em;
+}
+.problems__title {
+  color: getColor('background-white');
+  font-size: 1.5em;
+  font-weight: getFontWeight('font-extrabold');
+  letter-spacing: 0.05em;
+  &--accent {
+    @extend .problems__title;
+    color: getColor('brand-color');
+    font-size: 1em;
+  }
+}
+.list__background {
+  background-color: getColor('background-white');
+  margin-top: 1.875em;
+  padding: 1.25em 1.875em;
+  display: flex;
+  justify-content: center;
+}
+.problems__list {
+  display: flex;
+  flex-direction: column;
+  counter-reset: section;
+  list-style-type: none;
+}
+.problems__item {
+  margin-bottom: 0.625em;
+  font-size: 0.875em;
+  font-weight: getFontWeight('font-bold');
+  word-wrap: break-word;
+  line-height: 1.71;
+  letter-spacing: 0.07em;
+  &::before {
+    counter-increment: section;
+    content: '\2014  0'counters(section, '.') ' ';
+    display: block;
+    font-size: 0.875em;
+    color: getColor('brand-color');
+  }
+}

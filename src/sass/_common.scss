@@ -1,4 +1,5 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import './variables';
 
 :root {
   font-family: 'Montserrat', sans-serif;
@@ -6,19 +7,33 @@
   background-color: getColor('background-white');
   color: getColor('black');
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0px;
+}
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-color: getColor('background-white');
+  color: getColor('black');
 }
 ul,
 ol {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  list-style: none;
   margin-block-end: 0;
   margin-block-start: 0;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
 p {
   margin-block-end: 0;
   margin-block-start: 0;
@@ -28,4 +43,37 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.container {
+  min-width: 320px;
+  max-width: 1680px;
+  padding: 0 1.25em;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 2.5em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 11.4em;
+  }
+}
+.section {
+  padding-bottom: 3.125em;
+  //padding-top: 3.125em;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 3.125em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-bottom: 8.125em;
+  }
 }

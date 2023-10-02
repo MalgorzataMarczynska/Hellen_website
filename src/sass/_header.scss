@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo__img {
+  width: 75%;
+}
+.header__navigation {
+  display: none;
+}
+.header__smallmenu {
+  color: getColor('black');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  &:focus,
+  &:hover {
+    color: getColor('brand-color');
+    transform: scale(1.5);
+  }
+}
+.smallmenu {
+  fill: currentColor;
+  width: 1.31em;
+}

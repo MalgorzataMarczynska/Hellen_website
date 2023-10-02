@@ -1,0 +1,52 @@
+.hero__wave {
+  background-image: url('../images/icons/wave.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 6.7em 1.875em;
+}
+.hero__title {
+  font-size: 1.25em;
+  font-weight: getFontWeight('font-extrabold');
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  padding-bottom: 1.25em;
+  color: getColor('main-title');
+  margin: 0 auto;
+}
+.hero__warnings {
+  padding-top: 1.875em;
+  padding-bottom: 1.875em;
+  font-size: 0.875em;
+  font-weight: getFontWeight('font-bold');
+  line-height: 1.58;
+  letter-spacing: 0.08em;
+  color: getColor('black');
+  text-shadow: 0.15em 0.15em 0.5em getColor('primary-gray');
+  &--gray {
+    color: getColor('primary-gray');
+  }
+  &--orange {
+    color: getColor('brand-color');
+  }
+}
+.hero__button {
+  width: 16.25em;
+  padding: 0.875em 9.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: getColor('brand-color');
+  color: getColor('background-white');
+  font-size: 0.75em;
+  font-weight: getFontWeight('font-bold');
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.hero__image {
+  padding-top: 1.875em;
+  padding-bottom: 1.875em;
+}
+.image__main {
+  margin-right: auto;
+  margin-left: auto;
+}
