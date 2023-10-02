@@ -67,6 +67,7 @@
     background-image: url(../images/program_picture_mobile.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-clip: border-box;
     display: inline-block;
     position: absolute;
     top: 0em;

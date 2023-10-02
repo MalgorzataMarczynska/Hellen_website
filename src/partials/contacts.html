@@ -1,17 +1,42 @@
-<section>
-  <div>
-    <h6>
-      Registration for a <span>free</span> phone <span>consultation</span> on
-      the nuances of English UPE
-    </h6>
-    <p>
-      Leave a request for participation in a <span> free lesson </span>. A
-      consultant will contact you and answer your questions
-    </p>
-    <div>
-      <input type="text" name="name" placeholder="Name*" />
-      <input type="number" name="phone" placeholder="Phone*" />
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contacts__background">
+      <div class="contacts__background__color">
+        <div class="contacts">
+          <h6 class="contacts__title">
+            Registration for a
+            <span class="contacts__title--accent">free</span> phone
+            <span class="contacts__title--accent">consultation</span> on the
+            nuances of English UPE
+          </h6>
+          <p class="contacts__description">
+            Leave a request for participation in a
+            <span class="contacts__description--accent"> free lesson</span>.
+            <br />
+            A consultant will contact you and answer your questions
+          </p>
+          <div class="contacts__inputs">
+            <input
+              class="contacts__input"
+              type="text"
+              name="name"
+              placeholder="Name* -do walidacji"
+              required
+              pattern="^\w+\s+$"
+            />
+            <input
+              class="contacts__input"
+              type="number"
+              name="phone"
+              placeholder="Phone* -do walidacji"
+              required
+            />
+          </div>
+          <button type="submit" class="hero__button--contacts">
+            I want a free lesson
+          </button>
+        </div>
+      </div>
     </div>
-    <button type="button">I want a free lesson</button>
   </div>
 </section>

@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__title {
+  display: none;
+}
+.footer__logo {
+  margin-bottom: 1.5em;
+}
+.address {
+  @extend .footer;
+  margin-bottom: 3.25em;
+}
+.address__phone {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  font-weight: getFontWeight('font-semibold');
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: getColor('black');
+  transition: font-size 500ms ease-in-out;
+  &::before {
+    content: '';
+    background-image: url(../images/icons/phone.svg);
+    display: inline-block;
+    position: absolute;
+    top: 0.25em;
+    left: -2.2em;
+    width: 20px;
+    height: 20px;
+    color: getColor('brand-color');
+    transition: transform 500ms ease-in-out;
+  }
+  &:focus,
+  &:hover {
+    font-size: 1em;
+    color: getColor('brand-color');
+  }
+  &:focus::before,
+  &:hover::before {
+    transform: rotate(180deg);
+  }
+}
+.social__logo {
+  width: 2.6em;
+  height: 2.6em;
+  background-color: getColor('background-white');
+  border-radius: 10%;
+  background-image: url(../images/icons/instagram.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer__background {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+  background-color: getColor('black');
+}
+.footer__copyright {
+  font-size: 0.875em;
+  color: getColor('primary-gray');
+}

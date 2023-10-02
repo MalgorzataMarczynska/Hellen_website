@@ -30,7 +30,6 @@
   }
 }
 .hero__button {
-  width: 16.25em;
   padding: 0.875em 9.5em;
   margin-left: 1em;
   margin-right: 1em;
@@ -41,6 +40,14 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
+  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out,
+    color 500ms ease-in-out;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0.1em 0.1em 0.8em 0.4em rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    color: getColor('black');
+  }
 }
 .hero__image {
   padding-top: 1.875em;
