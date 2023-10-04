@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em 1.25em;
+  padding: 3.1em 1.25em;
 }
 .contacts__background {
   width: 100%;
@@ -46,10 +46,10 @@
   margin-bottom: 2em;
 }
 .contacts__input {
-  padding: 0.75em 0.5em;
+  padding: 0.8em 1em;
   margin-bottom: 1.25em;
-  width: 75%;
-  font-size: 1em;
+  width: 85%;
+  font-size: 0.875em;
   font-weight: getFontWeight('font-medium');
   letter-spacing: 0.05em;
   color: getColor('background-white');
@@ -57,13 +57,20 @@
   border: 0.1em solid getColor('background-white');
   &::placeholder {
     font-size: 0.875em;
+    font-weight: getFontWeight('font-medium');
     letter-spacing: 0.05em;
     color: getColor('primary-gray');
+  }
+  &:not(:placeholder-shown):required:valid {
+    border-color: getColor('primary-gray');
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: getColor('brand-color');
   }
 }
 .hero__button--contacts {
   @extend .hero__button;
   margin-right: auto;
   margin-left: auto;
-  padding: 1.25em 8.5em;
+  padding: 1.25em 2.8em;
 }

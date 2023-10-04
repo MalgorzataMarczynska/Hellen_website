@@ -19,7 +19,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 95%;
-  margin-bottom: 0.94em;
   padding: 1.25em 0.5em;
   background-color: getColor('background-white');
   color: getColor('black');
@@ -44,9 +43,15 @@
     color: getColor('background-white');
   }
 }
+.how__item:not(:last-child) {
+  margin-bottom: 0.94em;
+}
 .how__item__title {
+  max-width: 75%;
+  text-align: center;
   font-size: 0.875em;
   font-weight: getFontWeight('font-bold');
+  line-height: 1.7;
   &::after {
     content: '\2014';
     display: flex;
@@ -60,6 +65,8 @@
   color: getColor('primary-gray');
   font-weight: getFontWeight('font-medium');
   letter-spacing: 0.05em;
+  line-height: 1.7;
+  text-align: center;
 }
 .how__item__icon {
   width: 3em;

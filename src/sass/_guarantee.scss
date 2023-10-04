@@ -19,12 +19,13 @@
 .guarantee__item {
   position: relative;
   padding-left: 2.3em;
-  padding-bottom: 1.9em;
   font-size: 0.75em;
   font-weight: getFontWeight('font-medium');
   line-height: 1.7;
   word-wrap: break-word;
-
+  &--accent {
+    color: getColor('brand-color');
+  }
   &::before {
     content: '';
     background-image: url(../images/icons/campfire_icon.svg);
@@ -37,5 +38,6 @@
   }
 }
 .guarantee__item:not(:last-child) {
+  padding-bottom: 1.9em;
   border-left: 0.1em dashed getColor('primary-gray');
 }

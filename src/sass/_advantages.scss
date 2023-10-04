@@ -1,34 +1,39 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .advantages__title {
   display: none;
 }
 .advantages__list {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 3.5em;
-  padding-right: 3.5em;
+  padding-left: 5em;
+  padding-right: 0.5em;
 }
-.advantages__item {
-  margin-top: 2.5em;
+
+.advantages__item:not(:last-child) {
+  padding-bottom: 2.5em;
 }
+
 .advantages__text {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 75%;
+  position: relative;
   word-wrap: break-word;
-  align-items: center;
   font-size: 0.875em;
   font-weight: getFontWeight('font-bold');
   color: currentColor;
   line-height: 1.5;
   letter-spacing: 0.08em;
-  word-wrap: break-word;
   &::before {
     content: '';
+    position: absolute;
     background-image: url(../images/icons/female_icon.svg);
     background-size: contain;
-    display: inline;
+    display: inline-block;
     width: 58px;
     height: 60px;
-    margin-right: 0.625em;
+    top: -0.5em;
+    left: -5em;
   }
   &--teaching {
     @extend .advantages__text;
@@ -40,6 +45,7 @@
     @extend .advantages__text;
     &::before {
       background-image: url(../images/icons/guarantee_icon.svg);
+      top: -0.5em;
     }
   }
 }

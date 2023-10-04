@@ -1,7 +1,7 @@
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contacts__background">
-      <div class="contacts__background__color">
+<section id="contacts" class="section">
+  <div class="contacts__background">
+    <div class="contacts__background__color">
+      <div class="container">
         <div class="contacts">
           <h6 class="contacts__title">
             Registration for a
@@ -20,16 +20,21 @@
               class="contacts__input"
               type="text"
               name="name"
-              placeholder="Name* -do walidacji"
+              placeholder="Name*"
               required
-              pattern="^\w+\s+$"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+              title="Name must be two words separated by space."
             />
             <input
               class="contacts__input"
               type="number"
               name="phone"
-              placeholder="Phone* -do walidacji"
+              placeholder="Phone*"
               required
+              pattern="^[0-9]+$"
+              minlength="6"
+              maxlength="12"
+              title="Phone must be numbers only."
             />
           </div>
           <button type="submit" class="hero__button--contacts">

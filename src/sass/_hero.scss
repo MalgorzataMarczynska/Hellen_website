@@ -1,9 +1,10 @@
 .hero__wave {
   background-image: url('../images/icons/wave.svg');
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 6.7em 1.875em;
+  background-repeat: repeat;
+  background-position: 5em 1.5em;
 }
+
 .hero__title {
   font-size: 1.25em;
   font-weight: getFontWeight('font-extrabold');
@@ -11,7 +12,10 @@
   letter-spacing: 0.05em;
   padding-bottom: 1.25em;
   color: getColor('main-title');
-  margin: 0 auto;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
 }
 .hero__warnings {
   padding-top: 1.875em;
@@ -30,9 +34,9 @@
   }
 }
 .hero__button {
-  padding: 0.875em 9.5em;
-  margin-left: 1em;
-  margin-right: 1em;
+  padding: 0.875em 3.5em;
+  margin-left: 0em;
+  margin-right: 0em;
   background-color: getColor('brand-color');
   color: getColor('background-white');
   font-size: 0.75em;
@@ -50,6 +54,7 @@
   }
 }
 .hero__image {
+  align-items: center;
   padding-top: 1.875em;
   padding-bottom: 1.875em;
 }

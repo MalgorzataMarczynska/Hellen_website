@@ -1,5 +1,27 @@
+.problems__background--benefits {
+  @extend .problems__background;
+  background-image: linear-gradient(
+    to bottom,
+    getColor('black') 70%,
+    getColor('background-white') 70%
+  );
+}
 .problems__title--benefits {
   @extend .problems__title;
-  padding-top: 0;
-  padding-right: 7em;
+  padding-top: 0.9em;
+  padding-right: 5em;
+  font-size: 1.25em;
+  letter-spacing: 0.03em;
+  line-height: 1.36;
+}
+.list__background--benefits {
+  @extend .list__background;
+  margin-top: 1.85em;
+}
+.problems__item--benefits {
+  @extend .problems__item;
+  line-height: 2em;
+}
+.problems__item--benefits:not(:last-child) {
+  margin-bottom: 2em;
 }
