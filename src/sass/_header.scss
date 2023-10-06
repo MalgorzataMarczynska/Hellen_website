@@ -56,9 +56,11 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 6%;
-  right: 6%;
-  z-index: 100;
+  // top: 6%;
+  // right: 6%;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 .overlay {
   display: flex;
