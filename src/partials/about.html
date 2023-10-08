@@ -2,41 +2,59 @@
   <div class="container">
     <div class="about">
       <h2 class="about__title">Teacher</h2>
-      <div class="about__thumb">
-        <img
-          class="about__img"
-          src="./images/elena_mobile.png"
-          alt="Elena Moreva"
-        />
+      <div class="about__container">
+        <div class="about__thumb">
+          <picture>
+            <source
+              srcset="
+                ./images/elena_mobile.png    1x,
+                ./images/elena_mobile_2x.png 2x
+              "
+              media="(max-width: 767px)" />
+            <source
+              srcset="
+                ./images/elena_tablet.png    1x,
+                ./images/elena_tablet_2x.png 2x
+              "
+              media="(min-width: 768px) and (max-width:1279px)" />
+            <img
+              class="about__img"
+              src="./images/elena_mobile.png"
+              alt="Elena Moreva"
+          /></picture>
+        </div>
+        <div class="about__description">
+          <h2 class="about__title--underlined">Elena Moreva</h2>
+          <ul class="about__list">
+            <li class="about__item">
+              6 years of experience in preparing students for UPE
+            </li>
+            <li class="about__item">
+              Own result of passing VNO - 197 points 2 years in a row
+            </li>
+            <li class="about__item">
+              Passed excellent at the international analogue of UPE - Cambridge
+              PET (Preliminary English Test)
+            </li>
+          </ul>
+          <p class="about__article__text">
+            Graduated from the Institute of International Relations of the NAU
+            with a degree in translator-analyst. <br />In spare time takes
+            courses from the best universities in the world on effective
+            teaching and essay writing techniques. Completed: English Grammar
+            and Essay Writing (Berkeley), English Grammar & Style (The
+            University of Queesland), How to Write an Essay (Berkeley), Academic
+            and Business Writing(Berkeley), The Art of Teaching (GEMS
+            education), Powerful Tools for Teaching and Learning (University of
+            Houston).
+          </p>
+          <a
+            class="about__link"
+            href="https://www.cambridgeenglish.org/exams-and-tests/preliminary/"
+            >Cambridge English Entry Level Certificate</a
+          >
+        </div>
       </div>
-      <h2 class="about__title--underlined">Elena Moreva</h2>
-      <ul class="about__list">
-        <li class="about__item">
-          6 years of experience in preparing students for UPE
-        </li>
-        <li class="about__item">
-          Own result of passing VNO - 197 points 2 years in a row
-        </li>
-        <li class="about__item">
-          Passed excellent at the international analogue of UPE - Cambridge PET
-          (Preliminary English Test)
-        </li>
-      </ul>
-      <p class="about__article__text">
-        Graduated from the Institute of International Relations of the NAU with
-        a degree in translator-analyst. <br />In spare time takes courses from
-        the best universities in the world on effective teaching and essay
-        writing techniques. Completed: English Grammar and Essay Writing
-        (Berkeley), English Grammar & Style (The University of Queesland), How
-        to Write an Essay (Berkeley), Academic and Business Writing(Berkeley),
-        The Art of Teaching (GEMS education), Powerful Tools for Teaching and
-        Learning (University of Houston).
-      </p>
-      <a
-        class="about__link"
-        href="https://www.cambridgeenglish.org/exams-and-tests/preliminary/"
-        >Cambridge English Entry Level Certificate</a
-      >
     </div>
   </div>
 </section>

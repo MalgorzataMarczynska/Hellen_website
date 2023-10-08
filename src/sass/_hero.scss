@@ -1,65 +1,107 @@
-.hero__wave {
-  background-image: url('../images/icons/wave.svg');
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: 5em 1.5em;
-}
-
-.hero__title {
-  font-size: 1.25em;
-  font-weight: getFontWeight('font-extrabold');
-  line-height: 1.3;
-  letter-spacing: 0.05em;
-  padding-bottom: 1.25em;
-  color: getColor('main-title');
-}
 .hero {
   display: flex;
   flex-direction: column;
-}
-.hero__warnings {
-  padding-top: 1.875em;
-  padding-bottom: 1.875em;
-  font-size: 0.875em;
-  font-weight: getFontWeight('font-bold');
-  line-height: 1.58;
-  letter-spacing: 0.08em;
-  color: getColor('black');
-  text-shadow: 0.15em 0.15em 0.5em getColor('primary-gray');
-  &--gray {
-    color: getColor('primary-gray');
+  &__wave {
+    background-image: url('../images/icons/wave.svg');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: 5em 1.5em;
   }
-  &--orange {
-    color: getColor('brand-color');
+  &__texts {
+    display: flex;
+    flex-direction: column;
   }
-}
-.hero__button {
-  padding: 0.875em 3.5em;
-  margin-left: 0em;
-  margin-right: 0em;
-  background-color: getColor('brand-color');
-  color: getColor('background-white');
-  font-size: 0.75em;
-  font-weight: getFontWeight('font-bold');
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out,
-    color 500ms ease-in-out;
-  &:focus,
-  &:hover {
-    box-shadow: inset 0.1em 0.1em 0.8em 0.4em rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
+  &__title {
+    font-size: 1.25em;
+    font-weight: getFontWeight('font-extrabold');
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    padding-bottom: 1.25em;
+    color: getColor('main-title');
+  }
+  &__warnings {
+    padding-top: 1.875em;
+    padding-bottom: 1.875em;
+    font-size: 0.875em;
+    font-weight: getFontWeight('font-bold');
+    line-height: 1.58;
+    letter-spacing: 0.08em;
     color: getColor('black');
+    text-shadow: 0.15em 0.15em 0.5em getColor('primary-gray');
+    &--gray {
+      color: getColor('primary-gray');
+    }
+    &--orange {
+      color: getColor('brand-color');
+    }
+  }
+  &__button {
+    padding: 0.875em 3.5em;
+    align-items: center;
+    font-size: 0.75em;
+    font-weight: getFontWeight('font-bold');
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    background-color: getColor('brand-color');
+    color: getColor('background-white');
+    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out,
+      color 500ms ease-in-out;
+    &:focus,
+    &:hover {
+      box-shadow: inset 0.1em 0.1em 0.8em 0.4em rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+      color: getColor('black');
+    }
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.875em;
+    padding-bottom: 1.875em;
   }
 }
-.hero__image {
-  align-items: center;
-  padding-top: 1.875em;
-  padding-bottom: 1.875em;
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    &__wave {
+      background-image: url('../images/icons/wave.svg');
+      background-size: contain;
+      background-repeat: repeat;
+      background-position: 5em 1em;
+    }
+    &__texts {
+      max-width: 50%;
+      padding-right: 1em;
+    }
+    &__title {
+      font-size: 1.625em;
+      line-height: 1.6;
+      padding-bottom: 1.5em;
+    }
+    &__warnings {
+      padding-top: 0em;
+      padding-bottom: 2.2em;
+      font-size: 0.875em;
+    }
+    &__image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0em;
+      padding-bottom: 0em;
+    }
+  }
 }
 .image__main {
-  margin-right: auto;
-  margin-left: auto;
+  margin-bottom: 2.5em;
+}
+@media screen and (min-width: 768px) {
+  .image__main {
+    margin-bottom: 0em;
+  }
 }

@@ -3,74 +3,108 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.how__title {
-  font-size: 1.25em;
-  font-weight: getFontWeight('font-extrabold');
-  margin-bottom: 1.875em;
-}
-.how__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.how__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 95%;
-  padding: 1.25em 0.5em;
-  background-color: getColor('background-white');
-  color: getColor('black');
-  box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(185, 185, 185, 0.5);
-  cursor: pointer;
-  &:focus,
-  &:hover {
-    background-color: getColor('brand-color');
-    color: getColor('background-white');
-    box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(255, 104, 9, 0.5);
+  &__title {
+    font-size: 1.25em;
+    font-weight: getFontWeight('font-extrabold');
+    margin-bottom: 1.875em;
   }
-  &:focus .how__item__text,
-  &:hover .how__item__text {
-    color: getColor('background-white');
-  }
-  &:focus .how__item__icon,
-  &:hover .how__item__icon {
-    fill: getColor('background-white');
-  }
-  &:focus .how__item__title::after,
-  &:hover .how__item__title::after {
-    color: getColor('background-white');
-  }
-}
-.how__item:not(:last-child) {
-  margin-bottom: 0.94em;
-}
-.how__item__title {
-  max-width: 75%;
-  text-align: center;
-  font-size: 0.875em;
-  font-weight: getFontWeight('font-bold');
-  line-height: 1.7;
-  &::after {
-    content: '\2014';
+  &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: getColor('brand-color');
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    padding: 1.25em 0.5em;
+    background-color: getColor('background-white');
+    color: getColor('black');
+    box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(185, 185, 185, 0.5);
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      background-color: getColor('brand-color');
+      color: getColor('background-white');
+      box-shadow: 0.1em 0.1em 1.5em 0.3em rgba(255, 104, 9, 0.5);
+    }
+    &:focus .how__item__text,
+    &:hover .how__item__text {
+      color: getColor('background-white');
+    }
+    &:focus .how__item__icon,
+    &:hover .how__item__icon {
+      fill: getColor('background-white');
+    }
+    &:focus .how__item__title::after,
+    &:hover .how__item__title::after {
+      color: getColor('background-white');
+    }
+    &:not(:last-child) {
+      margin-bottom: 0.94em;
+    }
+    &__title {
+      max-width: 75%;
+      text-align: center;
+      font-size: 0.875em;
+      font-weight: getFontWeight('font-bold');
+      line-height: 1.7;
+      &::after {
+        content: '\2014';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: getColor('brand-color');
+      }
+    }
+    &__text {
+      font-size: 0.75em;
+      color: getColor('primary-gray');
+      font-weight: getFontWeight('font-medium');
+      letter-spacing: 0.05em;
+      line-height: 1.7;
+      text-align: center;
+    }
+    &__icon {
+      width: 3em;
+      height: 3em;
+      fill: getColor('brand-color');
+      margin-bottom: 0.8em;
+    }
   }
 }
-.how__item__text {
-  font-size: 0.75em;
-  color: getColor('primary-gray');
-  font-weight: getFontWeight('font-medium');
-  letter-spacing: 0.05em;
-  line-height: 1.7;
-  text-align: center;
-}
-.how__item__icon {
-  width: 3em;
-  height: 3em;
-  fill: getColor('brand-color');
-  margin-bottom: 0.8em;
+@media screen and (min-width: 768px) {
+  .how {
+    &__title {
+      font-size: 1.625em;
+      margin-bottom: 1.2em;
+    }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.675em;
+    }
+    &__item {
+      justify-content: center;
+      flex-basis: 20.875em;
+      height: 20.875em;
+      padding: 2.5em 1.375em;
+      &:not(:last-child) {
+        margin-bottom: 0em;
+      }
+      &__title {
+        line-height: 2;
+      }
+      &__text {
+        letter-spacing: 0.06em;
+        line-height: 2.3;
+      }
+      &__icon {
+        margin-bottom: 1.25em;
+      }
+    }
+  }
 }

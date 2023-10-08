@@ -8,6 +8,7 @@
 }
 .problems__title--benefits {
   @extend .problems__title;
+  max-width: 75%;
   padding-top: 0.9em;
   padding-right: 5em;
   font-size: 1.25em;
@@ -24,4 +25,24 @@
 }
 .problems__item--benefits:not(:last-child) {
   margin-bottom: 2em;
+}
+@media screen and (min-width: 768px) {
+  .problems__background--benefits {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('black') 55%,
+      getColor('background-white') 55%
+    );
+  }
+  .problems__title--benefits {
+    max-width: 100%;
+    padding-top: 2.9em;
+    padding-right: 0em;
+    font-size: 1.75em;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .problems__item--benefits:not(:last-child) {
+    margin-bottom: 1em;
+  }
 }

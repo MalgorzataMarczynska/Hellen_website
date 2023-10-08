@@ -1,0 +1,22 @@
+@mixin transition($attribute) {
+  transition: $attribute 500ms ease-in-out;
+}
+@mixin transition-delay($attribute) {
+  transition: $attribute 500ms 500ms ease-in-out;
+}
+@mixin grid($gap, $column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  flex-basis: calc(
+    80em - 1.875em - (($gap) * (($column) - 2)) / (($column) - 1)
+  );
+}
+@mixin grid-tablet($gap, $column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  flex-basis: calc((48em - 1.875em - ($gap)) / ($column));
+}

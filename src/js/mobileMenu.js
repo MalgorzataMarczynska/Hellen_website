@@ -13,7 +13,7 @@ const closeMenuOnLargeScreens = mediaQuery => {
     openMobileBtn.setAttribute('aria-expanded', false);
   }
 };
-const mediaQuery = window.matchMedia('(min-width: 768px)');
+const mediaQuery = window.matchMedia('(min-width: 1280px)');
 mediaQuery.addEventListener('change', closeMenuOnLargeScreens);
 closeMenuOnLargeScreens(mediaQuery);
 

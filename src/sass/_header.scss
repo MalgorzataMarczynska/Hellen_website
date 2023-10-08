@@ -1,10 +1,30 @@
 .section--header {
   padding-bottom: 0em;
 }
+@media screen and (min-width: 768px) {
+  .section--header {
+    padding-bottom: 2em;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__navigation {
+    padding-top: 3.1em;
+    display: flex;
+    flex-direction: column;
+    &--desktop {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    &__navigation {
+      padding-top: 4.5em;
+    }
+  }
 }
 .logo__img {
   width: 75%;
@@ -12,34 +32,35 @@
     width: 50%;
   }
 }
-.header__navigation {
-  padding-top: 3.1em;
-  display: flex;
-  flex-direction: column;
-  &--desktop {
-    display: none;
+@media screen and (min-width: 768px) {
+  .logo__img {
+    width: 80%;
+    &--mobile {
+      width: 80%;
+    }
   }
 }
-.header__smallmenu {
+.smallmenu {
   color: getColor('black');
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
+  @include transition(color);
+  @include transition-delay(transform);
   &:focus,
   &:hover {
     color: getColor('brand-color');
     transform: scale(1.5);
   }
+  &__link {
+    color: currentColor;
+  }
+  &__icon {
+    fill: currentColor;
+    width: 1.31em;
+  }
 }
-.smallmenu__link {
-  color: currentColor;
-}
-.smallmenu__icon {
-  fill: currentColor;
-  width: 1.31em;
-}
+
 .mobile {
   display: none;
   &__top {
@@ -48,6 +69,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.9em 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    &__top {
+      padding: 2.625em 0;
+    }
   }
 }
 .is-open {
@@ -73,41 +101,91 @@
 }
 .navigation {
   width: 85%;
+  &__link {
+    font-size: 1.25em;
+    font-weight: getFontWeight('font-extrabold');
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: getColor('background-white');
+    &:focus,
+    &:hover {
+      color: getColor('brand-color');
+    }
+    &--button {
+      display: flex;
+      justify-content: center;
+      margin-top: 4em;
+      padding: 0.875em 1.5em;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: getColor('brand-color');
+      border: 0.1em solid getColor('brand-color');
+      @include transition(transform);
+      &:focus,
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__desktop__link--button {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    &__list {
+      padding-left: 12.5em;
+    }
+    &__link {
+      font-size: 1.625em;
+      &--button {
+        display: none;
+      }
+    }
+    &__desktop__link--button {
+      display: flex;
+      padding: 0.95em 0.5em;
+      margin-left: 12em;
+      font-size: 0.875em;
+      font-weight: getFontWeight('font-bold');
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: getColor('brand-color');
+      border: 0.1em solid getColor('brand-color');
+      @include transition(transform);
+      &:focus,
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.navigation__item:not(:last-child) {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 768px) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
 }
 .close__icon {
   width: 1.5em;
   height: 1.5em;
   fill: getColor('background-white');
-  transition: transform 500ms 500ms ease-in-out, fill 500ms ease-in-out;
+  @include transition-delay(transform);
+  @include transition(fill);
   &:focus,
   &:hover {
     fill: getColor('brand-color');
     transform: scale(1.3);
   }
 }
-.navigation__item:not(:last-child) {
-  margin-bottom: 1em;
-}
-.navigation__link {
-  font-size: 1.25em;
-  font-weight: getFontWeight('font-extrabold');
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: getColor('background-white');
-  &:focus,
-  &:hover {
-    color: getColor('brand-color');
-  }
-  &--button {
-    display: flex;
-    justify-content: center;
-    margin-top: 4em;
-    padding: 0.875em 1.5em;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    color: getColor('brand-color');
-    border: 0.1em solid getColor('brand-color');
+@media screen and (min-width: 768px) {
+  .close__icon {
+    width: 2em;
+    height: 2em;
   }
 }
