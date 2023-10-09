@@ -2,13 +2,26 @@
   <div class="container">
     <footer class="footer">
       <h2 class="footer__title">Contact us</h2>
+      <div class="footer__data">
       <div class="footer__logo">
+        <picture>
+          <source
+              srcset="
+                ./images/logo_mobile.jpg    1x,
+                ./images/logo_2x_mobile.jpg 2x
+              "
+              media="(max-width: 767px)" />
+            <source
+              srcset="
+                ./images/logo_tablet.jpg    1x,
+                ./images/logo_tablet_2x.jpg 2x
+              "
+              media="(min-width: 768px) and (max-width:1279px)" />
         <img
           src="./images/logo_mobile.jpg"
-          alt="logo"
-          width="80px"
-          height="auto"
+          alt="logo"          
         />
+      </picture>
       </div>
       <address class="address">
         <a id="phone" class="address__phone" href="tel:+38 (000) 000 00 00"
@@ -22,8 +35,9 @@
           ><div class="social__logo"></div>
         </a>
       </address>
+    </div>
       <div class="footer__background">
-        <span class="footer__copyright"> &#169 All rights reserved, 2019</span>
+        <span class="footer__copyright">&#169 All rights reserved, 2019</span>
       </div>
     </footer>
   </div>

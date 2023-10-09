@@ -57,6 +57,7 @@
 
 .reviews__title {
   padding-top: 2.5em;
+  max-width: 75%;
   padding-bottom: 1.05em;
   font-size: 1.25em;
   font-weight: getFontWeight('font-extrabold');
@@ -69,7 +70,7 @@
   display: flex;
   justify-content: center;
   //height: 553px;
-  height: 70vh;
+  height: 50vh;
   width: 100%;
   margin-bottom: 1em;
 }

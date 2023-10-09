@@ -2,42 +2,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.guarantee__background {
-  background-color: getColor('guarantee-gray');
-  width: 100vw;
-}
-.guarantee__title {
-  margin-bottom: 1.15em;
-  font-size: 1.625em;
-  font-weight: getFontWeight('font-extrabold');
-  letter-spacing: 0.05em;
-}
-.guarantee__list {
-  padding: 1.625em;
-}
-.guarantee__item {
-  position: relative;
-  padding-left: 2.3em;
-  font-size: 0.75em;
-  font-weight: getFontWeight('font-medium');
-  line-height: 1.7;
-  word-wrap: break-word;
-  &--accent {
-    color: getColor('brand-color');
+  &__background {
+    background-color: getColor('guarantee-gray');
+    width: 100vw;
   }
-  &::before {
-    content: '';
-    background-image: url(../images/icons/campfire_icon.svg);
-    position: absolute;
-    top: 0;
-    left: -0.65em;
-    display: inline-block;
-    width: 15px;
-    height: 20px;
+  &__title {
+    margin-bottom: 1.15em;
+    font-size: 1.625em;
+    font-weight: getFontWeight('font-extrabold');
+    letter-spacing: 0.05em;
+  }
+  &__list {
+    padding: 1.625em;
+  }
+  &__item {
+    position: relative;
+    padding-left: 2.3em;
+    font-size: 0.75em;
+    font-weight: getFontWeight('font-medium');
+    line-height: 1.7;
+    word-wrap: break-word;
+    &--accent {
+      color: getColor('brand-color');
+    }
+    &::before {
+      content: '';
+      background-image: url(../images/icons/campfire_icon.svg);
+      position: absolute;
+      top: 0;
+      left: -0.65em;
+      display: inline-block;
+      width: 15px;
+      height: 20px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 1.9em;
+      border-left: 0.1em dashed getColor('primary-gray');
+    }
   }
 }
-.guarantee__item:not(:last-child) {
-  padding-bottom: 1.9em;
-  border-left: 0.1em dashed getColor('primary-gray');
+@media screen and (min-width: 768px) {
+  .guarantee {
+    &__background {
+      width: 90vw;
+    }
+    &__list {
+      padding: 1.875em 1.875em 1.875em 5em;
+    }
+    &__item {
+      line-height: 2.3;
+      &:not(:last-child) {
+        padding-bottom: 1em;
+      }
+    }
+  }
 }
