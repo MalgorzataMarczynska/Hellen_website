@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   &__wave {
-    background-image: url('../images/icons/wave.svg');
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: 5em 1.5em;
+    //background-color: bisque;
+    background-image: url('../images/icons/wave_mobile.svg');
+    background-size: 36em 34em;
+    background-repeat: no-repeat;
+    background-position: top -1.7em left -6em;
   }
+
   &__texts {
     display: flex;
     flex-direction: column;
@@ -46,8 +48,9 @@
     text-decoration: none;
     background-color: getColor('brand-color');
     color: getColor('background-white');
-    transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out,
-      color 500ms ease-in-out;
+    @include transition(box-shadow);
+    @include transition(transform);
+    @include transition(color);
     &:focus,
     &:hover {
       box-shadow: inset 0.1em 0.1em 0.8em 0.4em rgba(255, 255, 255, 0.4);
@@ -68,10 +71,9 @@
     flex-direction: row;
     justify-content: space-between;
     &__wave {
-      background-image: url('../images/icons/wave.svg');
-      background-size: contain;
-      background-repeat: repeat;
-      background-position: 5em 1em;
+      background-image: url('../images/icons/wave_tablet.svg');
+      background-size: 60em 23em;
+      background-position: top -1.5em left -16em;
     }
     &__texts {
       max-width: 50%;
@@ -97,6 +99,36 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    &__wave {
+      background-image: url('../images/icons/wave_desktop.svg');
+      background-size: 100em 25em;
+      background-position: top 4.5em left -17em;
+    }
+    &__texts {
+      max-width: 50%;
+      padding-right: 1em;
+    }
+    &__title {
+      padding-bottom: 0.4em;
+      font-size: 3.625em;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      color: getColor('black');
+    }
+    &__warnings {
+      padding-bottom: 2em;
+      font-size: 1.25em;
+    }
+    &__button {
+      padding: 1.75em 3.5em;
+      font-size: 0.875em;
+      letter-spacing: 0.12em;
+    }
+  }
+}
+
 .image__main {
   margin-bottom: 2.5em;
 }

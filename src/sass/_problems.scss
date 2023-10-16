@@ -74,6 +74,45 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .problems {
+    &__background {
+      background-image: url('../images/icons/fire1.svg'),
+        linear-gradient(
+          to bottom,
+          getColor('black') 85%,
+          getColor('background-white') 85%
+        );
+      background-repeat: no-repeat;
+      background-size: 68% 75%, cover;
+      background-position: bottom 60% right -60%, center;
+      padding-top: 6.2em;
+    }
+    &__title {
+      font-size: 2.875em;
+      max-width: 65%;
+      &--accent {
+        font-size: 1em;
+      }
+    }
+    &__list {
+      gap: 2em;
+    }
+    &__item {
+      font-size: 1.25em;
+      line-height: 1.4;
+      letter-spacing: 0.1em;
+      flex-basis: 15.5em;
+      &::before {
+        font-size: 1em;
+        margin-bottom: 0.875em;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
 .list__background {
   margin-top: 1.875em;
   padding: 1.25em 1.875em 0;
@@ -84,5 +123,11 @@
 @media screen and (min-width: 768px) {
   .list__background {
     padding: 1.875em 6em 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .list__background {
+    margin-top: 3.75em;
+    padding: 5em 6em 0;
   }
 }

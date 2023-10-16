@@ -9,11 +9,13 @@
     padding-left: 5em;
     padding-right: 0.5em;
   }
+
   &__item:not(:last-child) {
     padding-bottom: 2.5em;
   }
   &__text {
     max-width: 75%;
+    padding-left: 0.625em;
     position: relative;
     word-wrap: break-word;
     font-size: 0.875em;
@@ -21,6 +23,8 @@
     color: currentColor;
     line-height: 1.5;
     letter-spacing: 0.08em;
+    z-index: 1;
+
     &::before {
       content: '';
       position: absolute;
@@ -74,6 +78,34 @@
       &--guarantee {
         &::before {
           top: 0em;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .advantages {
+    justify-content: space-evenly;
+    &__list {
+      padding-left: 5.4em;
+    }
+    &__item:not(:last-child) {
+      padding-right: 3.5em;
+    }
+    &__text {
+      max-width: 70%;
+      font-size: 1.25em;
+      line-height: 1.2;
+      letter-spacing: 0.1em;
+      &::before {
+        width: 99px;
+        height: 102px;
+        top: -1em;
+        left: -4.45em;
+      }
+      &--guarantee {
+        &::before {
+          top: -1em;
         }
       }
     }
