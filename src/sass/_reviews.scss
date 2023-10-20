@@ -163,6 +163,56 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .reviews {
+    &__title {
+      padding-top: 2.75em;
+      padding-bottom: 2.15em;
+      font-size: 2.875em;
+    }
+    &__slide__track {
+      height: 40vh;
+      margin-bottom: 1em;
+    }
+    &__texts {
+      max-width: 50%;
+      margin-left: 2.875em;
+    }
+    &__name {
+      padding-bottom: 0.1em;
+      font-size: 1.875em;
+    }
+    &__description {
+      margin-bottom: 1.5em;
+      font-size: 0.875em;
+    }
+    &__review {
+      font-size: 1.125em;
+      line-height: 1.55;
+      //margin-bottom: 1.5em;
+    }
+    &__slide__nav {
+      &__person {
+        font-size: 1em;
+      }
+      &__indicator {
+        margin-top: 1em;
+        display: flex;
+        gap: 1.2em;
+        padding: 0;
+        list-style: none;
+        transition: all 0.5s ease-out;
+        &__item {
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
 .icon {
   &--3elipse {
     width: 2em;

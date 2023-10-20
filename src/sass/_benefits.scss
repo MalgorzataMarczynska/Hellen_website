@@ -46,3 +46,45 @@
     margin-bottom: 1em;
   }
 }
+@media screen and (min-width: 1280px) {
+  .problems__background--benefits {
+    //position: relative;
+    background-image: none,
+      linear-gradient(
+        to bottom,
+        getColor('black') 41%,
+        getColor('background-white') 41%
+      );
+    padding-top: 0.5em;
+  }
+  .problems__title--benefits {
+    display: none;
+  }
+  .list__background--benefits {
+    //position: absolute;
+    padding: 4.35em 5.25em;
+    z-index: 3;
+    margin-top: 0em;
+  }
+  .problems__list--benefits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    counter-reset: section;
+    gap: 2em;
+  }
+  .problems__item--benefits {
+    line-height: 1.4;
+    word-wrap: break-word;
+    flex-basis: 15.5em;
+    &::before {
+      font-size: 1em;
+      margin-bottom: 0.875em;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0em;
+    }
+  }
+}

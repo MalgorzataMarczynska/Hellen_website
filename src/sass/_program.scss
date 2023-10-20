@@ -150,59 +150,79 @@
   .program {
     align-items: flex-start;
     &__list {
-      padding-left: 4.2em;
+      padding-left: 0em;
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
     &__item {
+      width: 20%;
+      margin-left: 1em;
       &:not(:last-child) {
-        padding-bottom: 1.875em;
+        padding-bottom: 0em;
+        margin-right: 1.5em;
         &::before {
-          content: '';
-          position: absolute;
-          width: 98%;
+          width: 100vw;
           height: 0.1em;
-          background-color: getColor('primary-gray');
           top: 0em;
-          left: 0em;
+          left: -12em;
         }
       }
-
       &__semester {
-        letter-spacing: 0.07em;
+        padding-top: 3em;
+        position: relative;
+        font-size: 1.25em;
         &::before {
-          margin-right: 3.125em;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-right: 0em;
+          top: -0.3em;
+          left: 0;
+          width: 16px;
+          height: 16px;
+        }
+        &::first-letter {
+          font-size: 1.5em;
+          letter-spacing: 0.15em;
         }
       }
       &__description {
-        padding-left: 1.75em;
-        display: flex;
-        flex-direction: row;
-      }
-
-      &__resource {
-        display: flex;
+        padding-left: 0em;
         flex-direction: column;
-        padding-left: 3em;
-        margin-top: 0.6em;
-        margin-bottom: 0.6em;
+      }
+      &__resource {
+        padding-left: 0em;
+        margin-top: 0em;
+        margin-bottom: 1.75em;
         flex-basis: 11em;
         &:first-child {
-          padding-left: 1.6em;
+          padding-left: 0em;
         }
       }
+      &__title {
+        margin-bottom: 0.5em;
+        //padding-top: 1.25em;
+        font-size: 1.25em;
+        letter-spacing: 0.1em;
+      }
       &__details {
+        font-size: 1.125em;
+        letter-spacing: 0.09em;
+        line-height: 1.55;
         &--image {
-          padding-right: 10em;
+          padding-right: 0em;
         }
       }
     }
     &__background {
       padding-top: 7.5em;
       &::after {
-        background-image: url(../images/program_picture_clipped_tablet.png);
-        width: 384px;
-        height: 280px;
+        background-image: url(../images/program_picture_clipped_desktop.png);
+        width: 759px;
+        height: 502px;
+        bottom: -13.5em;
+        left: 0;
       }
     }
     &__title {

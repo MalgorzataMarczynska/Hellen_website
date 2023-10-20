@@ -57,3 +57,28 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .guarantee {
+    &__background {
+      width: 75vw;
+    }
+    &__title {
+      margin-bottom: 1em;
+      font-size: 2.875em;
+    }
+    &__list {
+      padding: 3.15em 7em;
+    }
+    &__item {
+      padding-left: 2em;
+      font-size: 1.25em;
+      line-height: 1.4;
+      &::before {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 22px;
+        height: 30px;
+      }
+    }
+  }
+}

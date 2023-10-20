@@ -105,3 +105,42 @@
     }
   }
 }
+@media screen and (min-width: 1280px) {
+  .about {
+    &__title {
+      margin-bottom: 1em;
+      font-size: 2.875em;
+      &--underlined {
+        font-size: 1.875em;
+      }
+    }
+    &__container {
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__description {
+      flex-basis: 35em;
+      padding-left: 2em;
+    }
+    &__list {
+      margin-bottom: 0.75em;
+    }
+    &__item {
+      padding-left: 2.5em;
+      font-size: 1em;
+      padding-bottom: 2em;
+    }
+    &__article__text {
+      margin-bottom: 1.125em;
+      font-size: 1.125em;
+      line-height: 1.5;
+    }
+    &__link {
+      font-size: 1.125em;
+      &:focus,
+      &:hover {
+        font-size: 1.375em;
+      }
+    }
+  }
+}
