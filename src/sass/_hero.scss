@@ -72,8 +72,8 @@
     justify-content: space-between;
     &__wave {
       background-image: url('../images/icons/wave_tablet.svg');
-      background-size: 60em 23em;
-      background-position: top -1.5em left -16em;
+      background-size: 70em 23em;
+      background-position: top -7em left -21em;
     }
     &__texts {
       max-width: 50%;
@@ -103,8 +103,8 @@
   .hero {
     &__wave {
       background-image: url('../images/icons/wave_desktop.svg');
-      background-size: 100em 25em;
-      background-position: top 4.5em left -17em;
+      background-size: 120em 25em;
+      background-position: top 0em left -19em;
     }
     &__texts {
       max-width: 50%;

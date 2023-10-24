@@ -45,9 +45,9 @@
   .navigation__desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     &__item:not(:first-child) {
-      margin-left: 0.875em;
+      margin-left: 1em;
     }
     &__link {
       font-size: 0.875em;

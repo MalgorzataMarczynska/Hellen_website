@@ -48,12 +48,11 @@
 }
 @media screen and (min-width: 1280px) {
   .problems__background--benefits {
-    //position: relative;
     background-image: none,
       linear-gradient(
         to bottom,
-        getColor('black') 41%,
-        getColor('background-white') 41%
+        getColor('black') 65%,
+        getColor('background-white') 65%
       );
     padding-top: 0.5em;
   }
@@ -61,19 +60,22 @@
     display: none;
   }
   .list__background--benefits {
-    //position: absolute;
-    padding: 4.35em 5.25em;
-    z-index: 3;
+    position: relative;
+    padding: 0em 0em;
     margin-top: 0em;
+    min-height: 35vh;
   }
   .problems__list--benefits {
+    position: absolute;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     counter-reset: section;
+    padding: 4.35em 5.25em;
     gap: 2em;
+    z-index: 3;
   }
   .problems__item--benefits {
     line-height: 1.4;
