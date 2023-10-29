@@ -33,6 +33,7 @@
 }
 @media screen and (min-width: 1280px) {
   .header {
+    padding-top: 1.5em;
     &__navigation {
       &--desktop {
         display: flex;
@@ -125,8 +126,6 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  // top: 6%;
-  // right: 6%;
   top: 0;
   right: 0;
   z-index: 10;
@@ -161,12 +160,13 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       text-decoration: none;
+      background-color: transparent;
       color: getColor('brand-color');
       border: 0.1em solid getColor('brand-color');
       @include transition(transform);
       &:focus,
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
     }
   }
@@ -194,6 +194,7 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       text-decoration: none;
+      background-color: transparent;
       color: getColor('brand-color');
       border: 0.1em solid getColor('brand-color');
       @include transition(transform);

@@ -1,3 +1,4 @@
+<button type="button" class="invisible" data-scroll></button>
 <header class="section--header">
   <div class="container">
     <div class="header">
@@ -29,9 +30,12 @@
           </li>
         </ul>
       </nav>
-      <a class="navigation__desktop__link--button" href="#program"
-        >Consultation by chat</a
+      <button
+        class="navigation__desktop__link--button open-modal"
+        type="button"
       >
+        Consultation by phone
+      </button>
       <div class="smallmenu">
         <a class="smallmenu__link open-menu" href="#">
           <svg class="smallmenu__icon">
@@ -41,7 +45,7 @@
       </div>
     </div>
 
-    <div class="mobile is-open">
+    <div class="mobile">
       <div class="overlay">
         <div class="navigation">
           <div class="mobile__top">
@@ -74,9 +78,9 @@
                 <a class="navigation__link" href="#contacts">Contacts</a>
               </li>
             </ul>
-            <a class="navigation__link--button" href="#phone"
-              >Consultation by chat</a
-            >
+            <button class="navigation__link--button open-modal" type="button">
+              Consultation by phone
+            </button>
           </nav>
         </div>
       </div>

@@ -1,0 +1,67 @@
+<div class="backdrop">
+  <div class="backdrop__modal modal">
+    <button class="modal__modal-x modal-x closeModal-button" type="button">
+      <svg class="closeModal-icon">
+        <use href="./images/icons/icons.svg#icon-x"></use>
+      </svg>
+    </button>
+    <form class="form">
+      <div
+        class="form__details"
+        role="group"
+        aria-labelledby="form-details-head"
+      >
+        <span class="form__header" id="form-details-head">
+          Zostaw swoje dane w formularzu poniżej
+        </span>
+        <label class="form__items">
+          <span class="form__title"> Imię </span>
+          <input
+            class="form__input input"
+            name="username"
+            type="text"
+            placeholder="Anna Nowak"
+            minlength="2"
+            required
+          />
+        </label>
+        <label class="form__items">
+          <span class="form__title"> Telefon </span>
+          <input
+            class="form__input input"
+            name="userphone"
+            type="tel"
+            placeholder="+48 222 222 222"
+            required
+          />
+        </label>
+        <label class="form__items">
+          <span class="form__title">Komentarz</span>
+          <textarea
+            class="form__textarea input"
+            name="comment"
+            rows="5"
+            placeholder="Daj nam znać, jesli potrzebujesz kontaktu o konkretnej godzinie lub dniu."
+          ></textarea>
+        </label>
+        <div class="form__policy">
+          <div class="policy">
+            <input
+              class="policy__checkbox"
+              name="policy-checkbox"
+              id="policy-checkbox"
+              type="checkbox"
+              required
+            />
+          </div>
+          <label for="policy-checkbox" class="policy__label"
+            >Oświadczam, iż akceptuję
+            <a class="policy__link" href="/">Regulamin</a> i
+            <a class="policy__link" href="/">Politykę Prywatności</a>.
+          </label>
+        </div>
+        <button class="hero__button--form" type="submit">Wyślij</button>
+      </div>
+    </form>
+  </div>
+</div>

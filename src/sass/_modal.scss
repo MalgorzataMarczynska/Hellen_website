@@ -1,0 +1,316 @@
+.backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: hsla(0, 0%, 0%, 0.55);
+  @include transition-delay(transform);
+  &__modal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 90vw;
+    translate: 5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    &__modal {
+      padding: 4em;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .backdrop {
+    &__modal {
+      padding: 8em;
+      width: 80vw;
+      translate: 10%;
+    }
+  }
+}
+.show-modal {
+  display: flex;
+  transform: scaleY(1);
+}
+.modal {
+  background-color: getColor('primary-gray');
+  cursor: initial;
+  transform: scaleY(1);
+  &__modal-x {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    &__modal-x {
+      top: 1em;
+      right: 1em;
+      width: 4em;
+      height: 4em;
+      padding: 1em;
+    }
+  }
+}
+.modal-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: getColor('primary-gray');
+  fill: inherit;
+  border: 0.1em solid getColor('black');
+  cursor: pointer;
+  @include transition(border);
+  @include transition(fill);
+  @include transition(transform);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    fill: getColor('brand-color');
+    border: 0.2em solid getColor('brand-color');
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-x {
+    border: 0.2em solid getColor('black');
+    &:hover,
+    &:focus {
+      border: 0.4em solid getColor('brand-color');
+    }
+  }
+}
+.form {
+  background-color: getColor('primary-gray');
+  &__header {
+    display: block;
+    margin-bottom: 0.75em;
+    font-size: 0.875em;
+    font-weight: getFontWeight('font-extrabold');
+    line-height: 1.3;
+    text-align: center;
+    color: getColor('main-title');
+  }
+  &__title {
+    position: relative;
+    font-size: 0.75em;
+    font-weight: getFontWeight('font-bold');
+    letter-spacing: 0.05em;
+    color: getColor('main-title');
+  }
+  &__input {
+    margin-bottom: 0.75em;
+    padding: 0.75em 0.5em;
+    &:focus {
+      border: 0.1em solid getColor('black');
+    }
+    &::placeholder {
+      font-size: 0.75em;
+      color: getColor('primary-gray');
+      letter-spacing: 0.05em;
+    }
+  }
+  &__textarea {
+    resize: none;
+    margin-bottom: 1em;
+    padding: 0.75em 0.5em;
+    &:focus {
+      border: 0.1em solid getColor('black');
+    }
+    &::placeholder {
+      font-size: 0.75em;
+      color: getColor('primary-gray');
+      letter-spacing: 0.05em;
+    }
+  }
+  &__items:focus-within {
+    fill: getColor('brand-color');
+  }
+  &__policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.875em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form {
+    &__header {
+      margin-bottom: 1.5em;
+      font-size: 1.75em;
+    }
+    &__title {
+      font-size: 1.375em;
+    }
+    &__input {
+      margin-bottom: 1.5em;
+      padding: 1.5em 1em;
+      &:focus {
+        border: 0.2em solid getColor('black');
+      }
+      &::placeholder {
+        font-size: 1.25em;
+      }
+    }
+    &__textarea {
+      margin-bottom: 2em;
+      padding: 1.5em 1em;
+      &:focus {
+        border: 0.2em solid getColor('black');
+      }
+      &::placeholder {
+        font-size: 1.25em;
+      }
+    }
+    &__policy {
+      margin-bottom: 3.75em;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form {
+    &__details {
+      width: 50vw;
+    }
+    &__header {
+      padding-top: 1em;
+      font-size: 2em;
+    }
+    &__title {
+      font-size: 1.5em;
+    }
+    &__policy {
+      margin-bottom: 3em;
+    }
+  }
+}
+.input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.875em;
+  color: getColor('black');
+  outline: none;
+  border: 0.1em solid getColor('guarantee-gray');
+  border-radius: 0.25em;
+  @include transition(border);
+}
+@media screen and (min-width: 768px) {
+  .input {
+    font-size: 1.25em;
+    border: 0.2em solid getColor('guarantee-gray');
+    border-radius: 0.5em;
+  }
+}
+.policy {
+  &__checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.125em;
+    height: 1.125em;
+    background-color: getColor('primary-gray');
+    border: 0.15em solid getColor('brand-color');
+    z-index: 4;
+    &:checked {
+      background-image: url(../images/icons/check_icon.svg);
+      background-repeat: no-repeat;
+      border: 0em;
+      z-index: 5;
+    }
+  }
+  &__label {
+    position: relative;
+    margin-left: 0.875em;
+    font-size: 0.75em;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    color: getColor('black');
+    cursor: pointer;
+    z-index: 1;
+  }
+  &__link {
+    color: getColor('brand-color');
+  }
+}
+@media screen and (min-width: 768px) {
+  .policy {
+    &__checkbox {
+      width: 2.25em;
+      height: 2.25em;
+      border: 0.3em solid getColor('brand-color');
+      &:checked {
+        background-size: 2em 2em;
+      }
+    }
+    &__label {
+      margin-left: 1.75em;
+      font-size: 1.5em;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .policy {
+    &__checkbox {
+      width: 2.5em;
+      height: 2.5em;
+      &:checked {
+        background-size: 2.25em 2.25em;
+      }
+    }
+    &__label {
+      margin-left: 2em;
+      font-size: 1.5em;
+    }
+  }
+}
+.hero__button--form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 1.25em 4.5em;
+  align-items: center;
+  font-size: 0.75em;
+  font-weight: getFontWeight('font-bold');
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  background-color: getColor('brand-color');
+  color: getColor('background-white');
+  border: 0em;
+  @include transition(box-shadow);
+  @include transition(transform);
+  @include transition(color);
+  &:focus,
+  &:hover {
+    box-shadow: inset 0.1em 0.1em 0.8em 0.4em rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    color: getColor('black');
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__button--form {
+    padding: 1.5em 8em;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__button--form {
+    padding: 1.25em 9em;
+    font-size: 1.5em;
+  }
+}

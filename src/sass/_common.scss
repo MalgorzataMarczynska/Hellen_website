@@ -76,3 +76,61 @@ img {
     padding-bottom: 8.125em;
   }
 }
+.invisible {
+  display: none;
+}
+.scroll-up-button {
+  position: fixed;
+  right: 1.25em;
+  bottom: 1.5em;
+
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+
+  margin: 0;
+  padding: 0em;
+  border-radius: 50%;
+  border: 0.25em solid getColor('brand-color');
+  background-color: getColor('background-white');
+  opacity: 0.55;
+  z-index: 100;
+  box-shadow: 0em 0em 2.25em 0.25em getColor('brand-color');
+  @include transition-delay(background-color);
+  @include transition-delay(opacity);
+  @include transition-delay(transform);
+
+  background-image: url(../images/icons/arrowUp.svg);
+  background-size: 1.25em 1.25em;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+.scroll-up-button:hover,
+.scroll-up-button:focus {
+  background-color: getColor('brand-color');
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+@media screen and (min-width: 768px) {
+  .scroll-up-button {
+    right: 1.5em;
+    bottom: 1.5em;
+
+    width: 3.25em;
+    height: 3.25em;
+
+    background-size: 1.5em 1.5em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .scroll-up-button {
+    right: 4em;
+    bottom: 2.5em;
+
+    width: 4.25em;
+    height: 4.25em;
+
+    background-size: 2.5em 2.5em;
+  }
+}
